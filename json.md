@@ -130,8 +130,8 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
 
 
 ## 8. jsonify
-*config设置了json格式的, 而且不是ajax请求的,indent = 2.
-*默认indent=None
+* config设置了json格式的, 而且不是ajax请求的,indent = 2.
+* 默认indent=None
 ``` 
 if current_app.config['JSONIFY_PRETTYPRINT_REGULAR'] \
         and not request.is_xhr:
