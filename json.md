@@ -69,7 +69,8 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
 
 ## 7. json.dumps(indent, sort_key)
 * sort_keys是告诉编码器按照字典排序(a到z)输出。
-```>>> print json.dumps(parsed, indent=4, sort_keys=True)
+```
+>>> print json.dumps(parsed, indent=4, sort_keys=True)
 [
     "foo", 
     {
@@ -81,7 +82,7 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
         ]
     }
 ]
-```
+
 
 >>> print json.dumps(parsed, indent=2, sort_keys=True)
 [
@@ -95,9 +96,8 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
     ]
   }
 ]
-```
 
-```
+
 >>> print json.dumps(parsed, indent=1, sort_keys=True)
 >>>[
  "foo", 
@@ -111,6 +111,7 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
  }
 ]
 ```
+
 
 ```
 >>> print json.dumps(parsed, indent=None, sort_keys=True)
