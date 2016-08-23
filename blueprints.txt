@@ -1,0 +1,12 @@
+1. Python 的私有, 只有__开头的(但是不以__结尾的),才是真正的私有,其他的都是public
+
+http://www.diveintopython.net/object_oriented_framework/private_functions.html
+
+If the name of a Python function, class method, or attribute starts with (but doesn't end with) two underscores, it's private; everything else is public. Python has no concept of protected class methods (accessible only in their own class and descendant classes). Class methods are either private (accessible only in their own class) or public (accessible from anywhere).
+
+2. python del,delattr
+
+3. assert '.' in a,'22222'
+
+4. uuid.UUID
+
