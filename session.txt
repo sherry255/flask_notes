@@ -1,0 +1,4 @@
+list(dict) == dict.keys()
+
+Python __slots__ (½ÚÊ¡ÄÚ´æ)
+
