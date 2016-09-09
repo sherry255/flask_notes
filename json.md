@@ -23,10 +23,10 @@ def jsonify(*args, **kwargs):
 
 * TextIOWrapper
 ```
->>>sys.stdout.encoding 
-'UTF-8' 
->>> sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='latin-1') 
->>> sys.stdout.encoding 'latin-1' 
+>>>sys.stdout.encoding
+'UTF-8'
+>>> sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='latin-1')
+>>> sys.stdout.encoding 'latin-1'
 ```
 
 * BufferedReader
@@ -50,8 +50,8 @@ def jsonify(*args, **kwargs):
 
 * 在字典中一个key映射多个值
 ```
->>> d = {} # A regular dictionary 
->>> d.setdefault('a', []).append(2) 
+>>> d = {} # A regular dictionary
+>>> d.setdefault('a', []).append(2)
 >>> d.setdefault('b', []).append(4)
 >>> d
 {'a': [1,2,4]}
@@ -59,7 +59,7 @@ def jsonify(*args, **kwargs):
 
 
 ## 5. Python 中的短路求值:
-* "or" 
+* "or"
 ```
 s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
 ```
@@ -72,12 +72,12 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
 ```
 >>> print json.dumps(parsed, indent=4, sort_keys=True)
 [
-    "foo", 
+    "foo",
     {
         "bar": [
-            "baz", 
-            null, 
-            1.0, 
+            "baz",
+            null,
+            1.0,
             2
         ]
     }
@@ -86,12 +86,12 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
 
 >>> print json.dumps(parsed, indent=2, sort_keys=True)
 [
-  "foo", 
+  "foo",
   {
     "bar": [
-      "baz", 
-      null, 
-      1.0, 
+      "baz",
+      null,
+      1.0,
       2
     ]
   }
@@ -100,12 +100,12 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
 
 >>> print json.dumps(parsed, indent=1, sort_keys=True)
 >>>[
- "foo", 
+ "foo",
  {
   "bar": [
-   "baz", 
-   null, 
-   1.0, 
+   "baz",
+   null,
+   1.0,
    2
   ]
  }
@@ -123,7 +123,7 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
 ["foo", {"bar": ["baz", null, 1.0, 2]}]
 ```
 
-``` 
+```
 >>> print json.dumps(parsed, indent=None, sort_keys=False)
 ["foo", {"bar": ["baz", null, 1.0, 2]}]
 ```
@@ -133,7 +133,7 @@ s = s.decode(kwargs.pop('encoding', None) or 'utf-8')
 * config设置了json格式的, 而且不是ajax请求的,indent = 2.
 * 默认indent=None
 
-``` 
+```
 if current_app.config['JSONIFY_PRETTYPRINT_REGULAR'] \
         and not request.is_xhr:
         indent = 2
